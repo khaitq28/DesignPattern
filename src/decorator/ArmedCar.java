@@ -32,7 +32,7 @@ public class ArmedCar extends DecoratedCar {
 	public void attack(){
 		if (gun != null){
 			gun.fire();
-		}
+		} 
 	}
 
 }
