@@ -8,6 +8,8 @@ public class ArmedCar extends DecoratedCar {
 	 * 
 	 */
 	
+	// remote 1
+	
 	private static final long serialVersionUID = -626764864052160666L;
 
 	private Gun gun;
