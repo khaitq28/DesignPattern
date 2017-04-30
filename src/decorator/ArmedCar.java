@@ -1,5 +1,6 @@
 package decorator;
 
+import decorator.component.Gun;
 import models.car.Car;
 
 public class ArmedCar extends DecoratedCar {
