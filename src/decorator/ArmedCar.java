@@ -28,5 +28,11 @@ public class ArmedCar extends DecoratedCar {
 		car.startEngine();
 		gun.fire();
 	}
+	
+	public void attack(){
+		if (gun != null){
+			gun.fire();
+		}
+	}
 
 }
