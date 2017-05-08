@@ -5,7 +5,7 @@ public   class Gun {
 	//master commit
 	
 	public void fire(){
-		System.out.println(" fire !!!....");
+		System.out.println("Gun  fire !!!....");
 	}
 
 }
