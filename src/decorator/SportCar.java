@@ -7,8 +7,9 @@ public class SportCar extends DecoratedCar {
 	/**
 	 *  
 	 */
-
 	//master change
+	//rebase change
+
 
 	private static final long serialVersionUID = -3573271123579646794L;
 
