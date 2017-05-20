@@ -6,6 +6,7 @@ import decorator.ArmedCar;
 import decorator.SportCar;
 import decorator.component.Gun;
 import singleton.UserSession;
+import state.Engine;
 import adapter.CarController;
 import adapter.CarListAdapter;
 import adapter.CarManager;
@@ -28,7 +29,8 @@ public class Pattern {
 //		adapterPattern();
 		
 //		decoratorPattern();
-		iteratorPattern();
+//		iteratorPattern();
+		statePattern();
 	}
 	
 	public static void iteratorPattern(){
@@ -85,6 +87,15 @@ public class Pattern {
 		CarController carController = new CarController();
 		CarListAdapter carListAdapter = new CarListAdapter(CarManager.getInstance());
 		carController.importAllCar(carListAdapter.getListCarImport());
+	}
+	
+	public static void statePattern(){
+		Engine engine = new Engine();
+		int i = 0;
+		while (i < 5){
+			engine.nexState();
+			i++;
+		} 
 	}
 
 }
