@@ -31,7 +31,7 @@ public class CarListAdapter {
 			Entry<Integer, String>	e 			= it.next();
 			Integer					carTypeId 	= e.getKey();
 			String					carName 	= e.getValue();
-			Car car 							= CarFactory.getCar(CarType.getCarType(carTypeId));
+			Car car 							= CarFactory.createCar(CarType.getCarType(carTypeId));
 			car.setName(carName);
 			listCarImport.add(car);
 		}

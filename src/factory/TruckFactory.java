@@ -7,7 +7,7 @@ import models.car.TruckType;
 
 public class TruckFactory {
 	
-	public static Truck getTruck(TruckType type){
+	public static Truck createTruck(TruckType type){
 		
 		Truck truck = null;
 		switch(type){

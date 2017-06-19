@@ -8,7 +8,7 @@ public class SedanCarBuilder extends CarBuilder {
 
 	
 	public SedanCarBuilder(){
-		this.car = CarFactory.getCar(CarType.SEDAN);
+		this.car = CarFactory.createCar(CarType.SEDAN);
 	}
 	
 	@Override

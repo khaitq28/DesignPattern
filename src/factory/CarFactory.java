@@ -10,7 +10,7 @@ import models.car.engine.IEngine;
 public class CarFactory {
 	
 	
-	public static Car getCar(CarType type){
+	public static Car createCar(CarType type){
 		
 		Car car = null;
 		switch (type) {
@@ -29,8 +29,8 @@ public class CarFactory {
 		return car;
 	}
 	
-	public static Car getCar(CarType carType, IEngine engine){
-		Car car = getCar(carType);
+	public static Car createCar(CarType carType, IEngine engine){
+		Car car = createCar(carType);
 		car.setEngine(engine);
 		return car;
 	}

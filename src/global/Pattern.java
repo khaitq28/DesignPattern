@@ -42,18 +42,18 @@ public class Pattern {
 	}
 	
 	public static void decoratorPattern(){
-		Car luxuryCar = CarFactory.getCar(CarType.LUXURY, new MediumEngine());
+		Car luxuryCar = CarFactory.createCar(CarType.LUXURY, new MediumEngine());
 		ArmedCar car = new ArmedCar(luxuryCar, new Gun());
 		car.decorate();
 		
-		Car sedanCar = CarFactory.getCar(CarType.SEDAN, new SmallEngine());
+		Car sedanCar = CarFactory.createCar(CarType.SEDAN, new SmallEngine());
 		SportCar sportCar= new SportCar(sedanCar);
 		sportCar.decorate();
 	}
 	
 	public static void bridgePattern(){
-		Car luxuryCar = CarFactory.getCar(CarType.LUXURY, new MediumEngine());
-		Car sedanCar = CarFactory.getCar(CarType.SEDAN, new SmallEngine());
+		Car luxuryCar = CarFactory.createCar(CarType.LUXURY, new MediumEngine());
+		Car sedanCar = CarFactory.createCar(CarType.SEDAN, new SmallEngine());
 		
 		luxuryCar.startEngine();
 		sedanCar.startEngine();
@@ -73,7 +73,7 @@ public class Pattern {
 	}
 	
 	public static void factoryPattern(){
-		Car c1 = CarFactory.getCar(CarType.LUXURY);
+		Car c1 = CarFactory.createCar(CarType.LUXURY);
 	}
 	
 	public static void singletonPattern(){

@@ -7,7 +7,7 @@ import models.car.CarType;
 public class LuxuryCarBuilder extends CarBuilder {
 	
 	public LuxuryCarBuilder(){
-		this.car = CarFactory.getCar(CarType.LUXURY);
+		this.car = CarFactory.createCar(CarType.LUXURY);
 	}
 	
 	@Override

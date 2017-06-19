@@ -14,8 +14,8 @@ public class Bridge {
 		System.out.println("Example of bridge patter");
 		System.out.println("Bridge patter");
 		
-		Car luxuryCar = CarFactory.getCar(CarType.LUXURY, new MediumEngine());
-		Car sedanCar = CarFactory.getCar(CarType.SEDAN, new SmallEngine());
+		Car luxuryCar = CarFactory.createCar(CarType.LUXURY, new MediumEngine());
+		Car sedanCar = CarFactory.createCar(CarType.SEDAN, new SmallEngine());
 		
 		luxuryCar.startEngine();
 		sedanCar.startEngine();

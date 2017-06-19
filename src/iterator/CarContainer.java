@@ -12,9 +12,9 @@ public class CarContainer implements IContainer{
 	
 	public CarContainer(){
 		listCar = new ArrayList<Car>();
-		listCar.add(CarFactory.getCar(CarType.LUXURY));
-		listCar.add(CarFactory.getCar(CarType.SEDAN));
-		listCar.add(CarFactory.getCar(CarType.SMALL));
+		listCar.add(CarFactory.createCar(CarType.LUXURY));
+		listCar.add(CarFactory.createCar(CarType.SEDAN));
+		listCar.add(CarFactory.createCar(CarType.SMALL));
 	}
 	
 	@Override
