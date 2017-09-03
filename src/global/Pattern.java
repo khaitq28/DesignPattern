@@ -24,12 +24,11 @@ public class Pattern {
 
 	public static void main(String[] args) {
 
-//		builderPattern();
-//		singletonPattern();
-//		adapterPattern();
-		
-//		decoratorPattern();
-//		iteratorPattern();
+		builderPattern();
+		singletonPattern();
+		adapterPattern();
+		decoratorPattern();
+		iteratorPattern();
 		statePattern();
 	}
 	
@@ -73,7 +72,8 @@ public class Pattern {
 	}
 	
 	public static void factoryPattern(){
-		Car c1 = CarFactory.createCar(CarType.LUXURY);
+		Car luxuryCar 	= CarFactory.createCar(CarType.LUXURY);
+		Car sedanCar  	= CarFactory.createCar(CarType.SEDAN);
 	}
 	
 	public static void singletonPattern(){

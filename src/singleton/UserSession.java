@@ -17,7 +17,7 @@ public class UserSession {
 		this.dataMap = dataMap;
 	}
 
-	public static  UserSession getInstance(){
+	public synchronized static  UserSession getInstance(){
 		if(userSession == null){
 			userSession = new UserSession();
 		}
