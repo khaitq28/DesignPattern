@@ -5,7 +5,6 @@ import java.util.List;
 import models.car.Car;
 
 
-//DEV branch 
 public class CarController {
 	
 	public  void importAllCar(List<Car> listCar) {
