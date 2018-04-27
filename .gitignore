@@ -6,3 +6,6 @@
 .project
 .classpath
 DesignPattern.iml
+.idea
+compiler.xml
+*.war

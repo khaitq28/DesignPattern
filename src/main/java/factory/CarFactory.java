@@ -1,15 +1,14 @@
 package factory;
 
-import models.car.Car;
-import models.car.CarType;
-import models.car.LuxuryCar;
-import models.car.SedanCar;
-import models.car.SmallCar;
+import models.car.*;
 import models.car.engine.IEngine;
 
 public class CarFactory {
-	
-	
+
+	/**
+	 * @param type
+	 * @return Car
+	 */
 	public static Car createCar(CarType type){
 		
 		Car car = null;
@@ -28,7 +27,13 @@ public class CarFactory {
 		}
 		return car;
 	}
-	
+
+	/**
+	 *
+	 * @param carType
+	 * @param engine
+	 * @return Car
+	 */
 	public static Car createCar(CarType carType, IEngine engine){
 		Car car = createCar(carType);
 		car.setEngine(engine);

@@ -1,10 +1,10 @@
 package bridge;
 
+import factory.CarFactory;
 import models.car.Car;
 import models.car.CarType;
 import models.car.engine.MediumEngine;
 import models.car.engine.SmallEngine;
-import factory.CarFactory;
 
 public class Bridge {
 	

@@ -2,8 +2,8 @@ package iterator;
 
 public interface IIterator {
 	
-	public Boolean hasNext();
+	Boolean hasNext();
 	
-	public Object next();
+	Object next();
 
 }

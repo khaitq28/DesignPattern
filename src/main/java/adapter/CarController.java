@@ -1,8 +1,8 @@
 package adapter;
 
-import java.util.List;
-
 import models.car.Car;
+
+import java.util.List;
 
 
 public class CarController {

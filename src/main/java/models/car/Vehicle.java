@@ -1,8 +1,8 @@
 package models.car;
 
-import java.io.Serializable;
-
 import models.car.engine.IEngine;
+
+import java.io.Serializable;
 
 public abstract class Vehicle implements Serializable   {
 

@@ -1,14 +1,14 @@
 package adapter;
 
+import factory.CarFactory;
+import models.car.Car;
+import models.car.CarType;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-
-import factory.CarFactory;
-import models.car.Car;
-import models.car.CarType;
 
 public class CarListAdapter {
 	
