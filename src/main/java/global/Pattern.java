@@ -10,6 +10,10 @@ import builder.SedanCarBuilder;
 import chainOfResponsibility.Calculate10;
 import chainOfResponsibility.Calculate2;
 import chainOfResponsibility.Calculate5;
+import chainOfResponsibility.security.Account;
+import chainOfResponsibility.security.AccountBalanceValidator;
+import chainOfResponsibility.security.AccountInfoValidator;
+import chainOfResponsibility.security.InvalidAccountException;
 import decorator.ArmedCar;
 import decorator.SportCar;
 import decorator.component.Gun;
@@ -40,7 +44,29 @@ public class Pattern {
         factoryPattern();
         bridgePattern();
 
-        chainOfResponsibility();
+        chainOfRes();
+    }
+
+    private static void chainOfRes() {
+
+        Account account = new Account("Abc", "xxx", -3000d);
+
+        AccountInfoValidator accountInfoValidator = new AccountInfoValidator();
+
+        AccountBalanceValidator accountBalanceValidator = new AccountBalanceValidator();
+
+        accountInfoValidator.setNextSecurity(accountBalanceValidator);
+
+        try {
+
+            accountInfoValidator.validateAcount(account);
+
+        } catch (InvalidAccountException ex1) {
+
+            System.out.println(ex1.getMessage());
+        }
+
+
     }
 
     private static void chainOfResponsibility() {
