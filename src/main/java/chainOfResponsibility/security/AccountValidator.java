@@ -24,7 +24,6 @@ public abstract class AccountValidator {
         if (nextAccountValidator == null) {
             return true;
         }
-
         return nextAccountValidator.validateAcount(account) ;
     }
 }

@@ -24,8 +24,7 @@ public class ArmedCar extends DecoratedCar {
 
 	@Override
 	public void decorate() {
-		car.startEngine();
-		gun.fire();
+		attack();
 	}
 	
 	public void attack(){

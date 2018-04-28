@@ -55,12 +55,17 @@ public abstract class Car  extends  Vehicle {
 	protected void construct(){
 //		System.out.println("Car type  = : " + carType);
 	}
-	
-	public String toString(){
-		return carType + " - " + name + " - " + iNumber + "- " + Id;
-	}
-	
 
+	@Override
+	public String toString() {
+		return "Car{" +
+				"carType=" + carType +
+				", name='" + name + '\'' +
+				", iNumber=" + iNumber +
+				", Id=" + Id +
+				", engine=" + engine +
+				'}';
+	}
 }
 
 

@@ -15,7 +15,9 @@ import chainOfResponsibility.security.AccountBalanceValidator;
 import chainOfResponsibility.security.AccountInfoValidator;
 import chainOfResponsibility.security.InvalidAccountException;
 import decorator.ArmedCar;
+import decorator.RegularCar;
 import decorator.SportCar;
+import decorator.component.Gps;
 import decorator.component.Gun;
 import factory.CarFactory;
 import iterator.CarContainer;
@@ -35,15 +37,14 @@ public class Pattern {
 
     public static void main(String[] args) {
 
+        decoratorPattern();
         builderPattern();
         singletonPattern();
         adapterPattern();
-        decoratorPattern();
         iteratorPattern();
         statePattern();
         factoryPattern();
         bridgePattern();
-
         chainOfRes();
     }
 
@@ -98,6 +99,7 @@ public class Pattern {
     }
 
     private static void decoratorPattern() {
+        System.out.println("-------------Decorator--------------------");
         Car luxuryCar = CarFactory.createCar(CarType.LUXURY, new MediumEngine());
         ArmedCar car = new ArmedCar(luxuryCar, new Gun());
         car.decorate();
@@ -105,6 +107,12 @@ public class Pattern {
         Car sedanCar = CarFactory.createCar(CarType.SEDAN, new SmallEngine());
         SportCar sportCar = new SportCar(sedanCar);
         sportCar.decorate();
+
+        RegularCar regularCar = new RegularCar(sedanCar, new Gps());
+        regularCar.decorate();
+
+        System.out.println("-------------********--------------------");
+
     }
 
     private static void bridgePattern() {

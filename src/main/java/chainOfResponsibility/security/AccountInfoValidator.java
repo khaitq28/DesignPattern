@@ -23,13 +23,16 @@ public class AccountInfoValidator extends AccountValidator {
         }
 
         System.out.println("Account Infor is valid...");
+
         return validateByNextAccountValidator(acount);
     }
 
     private boolean isEmptyField(String field) {
+
         if (StringUtils.isEmpty(field)) {
             return true;
         }
+
         return false;
     }
 

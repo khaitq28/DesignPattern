@@ -19,7 +19,6 @@ public class SportCar extends DecoratedCar {
 
 	@Override
 	public void decorate() {
-		car.startEngine();
 		System.out.println("Sport car ...");
 	}
 
