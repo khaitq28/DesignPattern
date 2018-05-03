@@ -12,8 +12,11 @@ public class Test {
 
         DaoFactory smallCarDaoFactory = DaoFactory.getDaoFactoryByType(DbType.ORACLE);
 
-        SmallCarDao smallCarDao = smallCarDaoFactory.getSmallCarDao();
+        SmallCarDao smallCarOracleDao = smallCarDaoFactory.getSmallCarDao();
 
-        smallCarDao.getSmallCarByINumber();
+        SmallCarDao smallCarDb2Dao = DaoFactory.getDaoFactoryByType(DbType.DB2).getSmallCarDao();
+
+        smallCarOracleDao.getSmallCarByINumber();
+        smallCarDb2Dao.getSmallCarByINumber();
     }
 }
