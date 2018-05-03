@@ -10,8 +10,6 @@ public class CarController {
 	public  void importAllCar(List<Car> listCar) {
 		saveToDb(listCar);
 		
-		
-		
 		displayNewItems(listCar);
 		
 	}
@@ -24,8 +22,6 @@ public class CarController {
 		for(Car car : listCar){
 			System.out.println(car.toString());
 		}
-		
-		
 	}
 	
 
