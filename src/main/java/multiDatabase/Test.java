@@ -10,13 +10,17 @@ public class Test {
 
     public  static  void  main(String... args) {
 
-        DaoFactory smallCarDaoFactory = DaoFactory.getDaoFactoryByType(DbType.ORACLE);
+        DaoFactory entityDaoFactory = DaoFactory.getDaoFactoryByType(DbType.ORACLE);
 
-        SmallCarDao smallCarOracleDao = smallCarDaoFactory.getSmallCarDao();
+        SmallCarDao smallCarOracleDao = entityDaoFactory.getSmallCarDao();
 
         SmallCarDao smallCarDb2Dao = DaoFactory.getDaoFactoryByType(DbType.DB2).getSmallCarDao();
 
         smallCarOracleDao.getSmallCarByINumber();
         smallCarDb2Dao.getSmallCarByINumber();
+
+        SedanCarDao sedanCarDao = entityDaoFactory.getSedanCarDao();
+
+
     }
 }

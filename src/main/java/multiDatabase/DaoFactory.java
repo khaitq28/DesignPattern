@@ -10,14 +10,16 @@ public abstract class DaoFactory {
 
     abstract SmallCarDao getSmallCarDao();
 
+    abstract SedanCarDao getSedanCarDao();
+
 
     public static DaoFactory getDaoFactoryByType(DbType dbType) {
         switch (dbType) {
             case DB2:
-                return new SmallCarDb2DaoFactory();
+                return new EntityDb2DaoFactory();
 
             case ORACLE:
-                return new SmallCarOracleDaoFactory();
+                return new EntityOracleDaoFactory();
 
                 default:
                     return null;

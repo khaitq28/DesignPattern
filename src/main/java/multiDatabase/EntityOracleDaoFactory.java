@@ -6,8 +6,13 @@ package multiDatabase;
  * Github:  https://github.com/quangkhai88
  */
 
-public class SmallCarOracleDaoFactory extends  DaoFactory {
+public class EntityOracleDaoFactory extends  DaoFactory {
 
+
+    @Override
+    SedanCarDao getSedanCarDao() {
+        return null; //return new SedanCarOracleDao();
+    }
 
     @Override
     SmallCarDao getSmallCarDao() {
