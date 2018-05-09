@@ -178,7 +178,7 @@ public class Pattern {
         try {
 
             in1.conectTo("vnxpress.net");
-            in1.conectTo("google.com");
+            in1.conectTo("facebook.com");
 
         } catch (Exception e) {
             System.out.println(e);

@@ -1,5 +1,8 @@
 package proxy;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by khaitq
  * Date: 09/05/2018
@@ -10,11 +13,18 @@ public class ProxyInternet implements Internet {
 
     private Internet internet = new RealInternet();
 
+    private static List<String> blackListSite = new ArrayList<String>();
+
+    static {
+        blackListSite.add("facebook.com");
+        blackListSite.add("amazon.fr");
+    }
+
     @Override
     public void conectTo(String host) throws Exception {
 
-        if (host.equalsIgnoreCase("google.com")) {
-            throw new Exception("connect to google : Access denied");
+        if (blackListSite.contains(host)) {
+            throw new Exception("connect to host : Access denied");
         }
 
         internet.conectTo(host);
