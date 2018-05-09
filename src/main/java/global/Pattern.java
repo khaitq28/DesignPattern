@@ -26,6 +26,8 @@ import models.car.Car;
 import models.car.CarType;
 import models.car.engine.MediumEngine;
 import models.car.engine.SmallEngine;
+import proxy.Internet;
+import proxy.ProxyInternet;
 import singleton.UserSession;
 import state.Engine;
 
@@ -37,15 +39,17 @@ public class Pattern {
 
     public static void main(String[] args) {
 
-        decoratorPattern();
-        builderPattern();
-        singletonPattern();
-        adapterPattern();
-        iteratorPattern();
-        statePattern();
-        factoryPattern();
-        bridgePattern();
-        chainOfRes();
+//        decoratorPattern();
+//        builderPattern();
+//        singletonPattern();
+//        adapterPattern();
+//        iteratorPattern();
+//        statePattern();
+//        factoryPattern();
+//        bridgePattern();
+//        chainOfRes();
+
+        proxyPattern();
     }
 
     private static void chainOfRes() {
@@ -166,5 +170,20 @@ public class Pattern {
             i++;
         }
     }
+
+    private static  void proxyPattern() {
+
+        Internet in1 = new ProxyInternet();
+
+        try {
+
+            in1.conectTo("vnxpress.net");
+            in1.conectTo("google.com");
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+
 
 }
