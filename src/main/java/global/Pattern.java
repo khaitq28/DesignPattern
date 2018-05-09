@@ -39,15 +39,15 @@ public class Pattern {
 
     public static void main(String[] args) {
 
-//        decoratorPattern();
-//        builderPattern();
-//        singletonPattern();
-//        adapterPattern();
-//        iteratorPattern();
-//        statePattern();
-//        factoryPattern();
-//        bridgePattern();
-//        chainOfRes();
+        decoratorPattern();
+        builderPattern();
+        singletonPattern();
+        adapterPattern();
+        iteratorPattern();
+        statePattern();
+        factoryPattern();
+        bridgePattern();
+        chainOfRes();
 
         proxyPattern();
     }
