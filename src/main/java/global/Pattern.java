@@ -7,6 +7,9 @@ import builder.CarBuilder;
 import builder.CarDirectorBuilder;
 import builder.LuxuryCarBuilder;
 import builder.SedanCarBuilder;
+import builder.message.EmailMessageBuilder;
+import builder.message.JmsMessageBuilder;
+import builder.message.MessageCreator;
 import chainOfResponsibility.Calculate10;
 import chainOfResponsibility.Calculate2;
 import chainOfResponsibility.Calculate5;
@@ -138,6 +141,16 @@ public class Pattern {
         director = new CarDirectorBuilder(carBuilder);
         director.buildCar();
         System.out.println(director.getCar().toString());
+
+
+        System.out.println("----------------------------");
+        MessageCreator messageCreator = new MessageCreator(new EmailMessageBuilder());
+        System.out.println(messageCreator.getMessage());
+        messageCreator = new MessageCreator(new JmsMessageBuilder());
+        System.out.println(messageCreator.getMessage());
+        System.out.println("----------------------------");
+
+
     }
 
     private static void factoryPattern() {
