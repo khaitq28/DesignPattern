@@ -10,7 +10,7 @@ package builder.message;
 public class EmailMessageBuilder implements MessageBuilder {
 
     @Override
-    public Message buidMessage() throws Exception {
+    public Message buildMessage() throws Exception {
 
         Message emailMessage = MessageFactory.createMessage(MessageType.EMAIL);
 

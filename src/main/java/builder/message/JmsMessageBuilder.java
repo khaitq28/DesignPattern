@@ -9,7 +9,7 @@ package builder.message;
 public class JmsMessageBuilder implements MessageBuilder {
 
         @Override
-        public Message buidMessage() throws Exception {
+        public Message buildMessage() throws Exception {
 
             Message jmsMessage = MessageFactory.createMessage(MessageType.JMS);
             jmsMessage.setFont(12);

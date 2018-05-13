@@ -15,7 +15,7 @@ public class MessageCreator {
     }
 
     public Message getMessage() throws Exception {
-       return this.messageBuilder.buidMessage();
+       return this.messageBuilder.buildMessage();
     }
 
 
