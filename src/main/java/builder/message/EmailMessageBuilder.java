@@ -1,24 +1,22 @@
 package builder.message;
 
+
 /**
  * Created by khaitq
  * Date: 11/05/2018
  * Github:  https://github.com/quangkhai88
  */
 
-public class EmailMessageBuilder extends MessageBuilder {
-
-    public EmailMessageBuilder() {
-        this.message = new EmailMessage();
-    }
+public class EmailMessageBuilder implements MessageBuilder {
 
     @Override
-    void buidMessageProtocol() {
-        this.message.setFont(12);
-    }
+    public Message buidMessage() throws Exception {
 
-    @Override
-    void buildMessageFormat() {
-        this.message.setProtocol("IMAP");
+        Message emailMessage = MessageFactory.createMessage(MessageType.EMAIL);
+
+        emailMessage.setFont(12);
+        emailMessage.setProtocol("IMAP");
+
+        return emailMessage;
     }
 }

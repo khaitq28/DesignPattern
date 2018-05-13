@@ -144,12 +144,15 @@ public class Pattern {
 
 
         System.out.println("----------------------------");
-        MessageCreator messageCreator = new MessageCreator(new EmailMessageBuilder());
-        System.out.println(messageCreator.getMessage());
-        messageCreator = new MessageCreator(new JmsMessageBuilder());
-        System.out.println(messageCreator.getMessage());
-        System.out.println("----------------------------");
+        try {
+            MessageCreator messageCreator = new MessageCreator(new EmailMessageBuilder());
+            System.out.println(messageCreator.getMessage());
+            messageCreator = new MessageCreator(new JmsMessageBuilder());
+            System.out.println(messageCreator.getMessage());
+            System.out.println("----------------------------");
+        } catch (Exception e) {
 
+        }
 
     }
 

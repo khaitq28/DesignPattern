@@ -6,22 +6,8 @@ package builder.message;
  * Github:  https://github.com/quangkhai88
  */
 
-public abstract class MessageBuilder {
+public interface MessageBuilder {
 
-    protected Message message;
-
-    protected Message buidMessage() {
-
-        buidMessageProtocol();
-        buildMessageFormat();
-
-        return message;
-    }
-
-    abstract void buidMessageProtocol();
-
-    abstract void buildMessageFormat();
-
-
+    Message buidMessage() throws Exception;
 
 }

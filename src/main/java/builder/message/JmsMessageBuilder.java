@@ -6,21 +6,14 @@ package builder.message;
  * Github:  https://github.com/quangkhai88
  */
 
-public class JmsMessageBuilder extends MessageBuilder {
+public class JmsMessageBuilder implements MessageBuilder {
 
-    public JmsMessageBuilder() {
-        this.message = new JmsMessage();
-    }
+        @Override
+        public Message buidMessage() throws Exception {
 
-
-    @Override
-    void buidMessageProtocol() {
-        this.message.setProtocol("HTTP");
-    }
-
-
-    @Override
-    void buildMessageFormat() {
-        this.message.setFont(10);
-    }
+            Message jmsMessage = MessageFactory.createMessage(MessageType.JMS);
+            jmsMessage.setFont(12);
+            jmsMessage.setProtocol("HTTP");
+            return jmsMessage;
+        }
 }
