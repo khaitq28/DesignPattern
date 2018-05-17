@@ -9,4 +9,6 @@ package builder.message.svn;
 public abstract class Builder {
 
     public  abstract Buildable build(String input);
+
+    public  abstract Object get(String input);
 }

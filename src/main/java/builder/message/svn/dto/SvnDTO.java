@@ -1,4 +1,4 @@
-package builder.message.svn;
+package builder.message.svn.dto;
 
 /**
  * Created by khaitq
@@ -10,13 +10,25 @@ public class SvnDTO {
 
     private String number;
 
+    private AddressDTO addressDTO;
+
     @Override
     public String toString() {
         return "SvnDTO{" +
                 "number='" + number + '\'' +
+                ", addressDTO=" + addressDTO +
                 ", inCode='" + inCode + '\'' +
                 '}';
     }
+
+    public AddressDTO getAddressDTO() {
+        return addressDTO;
+    }
+
+    public void setAddressDTO(AddressDTO addressDTO) {
+        this.addressDTO = addressDTO;
+    }
+
 
     public String getNumber() {
         return number;

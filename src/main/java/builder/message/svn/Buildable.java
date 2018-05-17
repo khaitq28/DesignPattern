@@ -8,5 +8,5 @@ package builder.message.svn;
 
 public interface Buildable {
 
-    Buildable build(String input);
+    Object build(String input);
 }

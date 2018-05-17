@@ -6,18 +6,15 @@ package builder.message.svn;
  * Github:  https://github.com/quangkhai88
  */
 
-public class SvnService {
+public class SvnService extends Service {
 
-    private Builder builder;
+//    public Buildable getResult(String input) {
+//        Buildable buildable =  builder.build(input);
+//        return buildable;
+//    }
 
-    public void setBuilder(Builder builder) {
-        this.builder = builder;
-    }
-
-    public Buildable getResult(String input) {
-
-        Buildable buildable =    builder.build(input);
-
-        return buildable;
+    @Override
+    public Object get(String input) {
+        return builder.get(input);
     }
 }

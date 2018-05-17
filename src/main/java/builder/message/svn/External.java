@@ -1,5 +1,7 @@
 package builder.message.svn;
 
+import builder.message.svn.dto.SvnDTO;
+
 /**
  * Created by khaitq
  * Date: 17/05/2018
@@ -10,13 +12,11 @@ public class External {
 
     public static void main(String... args) {
 
-        SvnService service = new SvnService();
+        Service service = new SvnService();
         service.setBuilder(new SvnBuilder());
 
-        Buildable obj =    service.getResult("test");
+        SvnDTO obj = (SvnDTO) service.get("test");
 
-        SvnBuildable svnBuildable = (SvnBuildable) obj;
-
-        System.out.println(svnBuildable);
+        System.out.println(obj);
     }
 }
