@@ -13,7 +13,7 @@ public class External {
     public static void main(String... args) {
 
         Service service = new SvnService();
-        service.setBuilder(new SvnBuilder());
+        service.setBuilder(new ResultBuilder());
 
         SvnDTO obj = (SvnDTO) service.get("test");
 

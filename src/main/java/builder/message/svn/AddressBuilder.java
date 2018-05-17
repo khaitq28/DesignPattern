@@ -8,7 +8,7 @@ import builder.message.svn.dto.AddressDTO;
  * Github:  https://github.com/quangkhai88
  */
 
-public class AddressBuildable implements  Buildable {
+public class AddressBuilder implements  Buildable {
 
     @Override
     public Object build(String input) {

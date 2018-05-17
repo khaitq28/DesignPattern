@@ -9,29 +9,14 @@ import builder.message.svn.dto.SvnDTO;
  * Github:  https://github.com/quangkhai88
  */
 
-public class SvnBuilder extends  Builder {
+public class SvnBuilder implements Buildable {
 
     @Override
-    public Buildable build(String input) {
+    public Object build(String input) {
 
-        SvnBuildable object = new SvnBuildable();
-
-        object.build(input);
-
-        return object;
-    }
-
-    @Override
-    public Object get(String input) {
-
-
-        AddressBuildable addressBuildable   = new AddressBuildable();
-        SvnBuildable svnBuildable           = new SvnBuildable();
-
-        SvnDTO  svnDTO          = (SvnDTO) svnBuildable.build(input);
-        AddressDTO addressDTO   = (AddressDTO) addressBuildable.build(input);
-
-        svnDTO.setAddressDTO(addressDTO);
+        SvnDTO svnDTO = new SvnDTO();
+        svnDTO.setInCode(input);
+        svnDTO.setNumber(input);
 
         return svnDTO;
     }
