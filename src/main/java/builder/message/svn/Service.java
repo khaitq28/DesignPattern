@@ -14,5 +14,7 @@ public abstract class Service {
         this.builder = builder;
     }
 
-    public abstract Object get(String input);
+    public Object get(String input) {
+        return builder.get(input);
+    }
 }
