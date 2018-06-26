@@ -53,6 +53,8 @@ public class Pattern {
         chainOfRes();
 
         proxyPattern();
+        
+        chainOfResponsibility();
     }
 
     private static void chainOfRes() {
