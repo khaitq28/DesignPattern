@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class UserSession {
 
-	private static UserSession userSession;
+	private static UserSession userSession = getInstance();
 	
 	private Map<Object, Object> dataMap = null;
 	
@@ -17,9 +17,11 @@ public class UserSession {
 		this.dataMap = dataMap;
 	}
 
-	public synchronized static  UserSession getInstance(){
+	public static  UserSession getInstance(){
 		if(userSession == null){
-			userSession = new UserSession();
+			synchronized(UserSession.class) {
+				userSession = new UserSession();
+			}
 		}
 		return userSession;
 	}
