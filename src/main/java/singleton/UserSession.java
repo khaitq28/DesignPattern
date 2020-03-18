@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class UserSession {
 
-	private static UserSession userSession = getInstance();
+	private static volatile UserSession userSession = getInstance();
 	
 	private Map<Object, Object> dataMap = null;
 	
