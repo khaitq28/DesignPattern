@@ -1,5 +1,7 @@
 package objectBuilder;
 
+import objectBuilder.more.AmazonException;
+
 public class Client {
 
     public static  void main(String[] args) {
@@ -13,15 +15,13 @@ public class Client {
 
         String var = "ABCD";
         NotFoundException ex = new NotFoundException.Builder().addMessage(var).setHttpCode(400).build();
-
         ex.print();
 
-
         Entity entity = new Entity.Builder().setMarque("mar").setModel("mod").setName("bmw").build();
-
         entity.print();
 
-
+        AmazonException amazonException = new AmazonException.Builder().addMessage("OK").setHttpCode(120).build();
+        amazonException.print();
     }
 
 
