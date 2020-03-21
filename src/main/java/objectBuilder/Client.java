@@ -2,21 +2,26 @@ package objectBuilder;
 
 public class Client {
 
-    public static  void main(String[] args) throws InstantiationException, IllegalAccessException {
-
-
+    public static  void main(String[] args) {
 
         Item item = new Item.Builder().build();
-
-        item.print();;
-
-        item = new Item.Builder().setUuid("1234").setName("item 1").build();
-
         item.print();
 
-        new NotFoundException.Builder().addMessage("cv").build();
+        item = new Item.Builder().setUuid("1234").setName("item 1").build();
+        item.print();
 
-        new NotFoundException.Builder().build();
+
+        String var = "ABCD";
+        NotFoundException ex = new NotFoundException.Builder().addMessage(var).setHttpCode(400).build();
+
+        ex.print();
+
+
+        Entity entity = new Entity.Builder().setMarque("mar").setModel("mod").setName("bmw").build();
+
+        entity.print();
+
+
     }
 
 

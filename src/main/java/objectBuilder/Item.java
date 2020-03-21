@@ -12,15 +12,7 @@ public class Item {
 
     private String marque;
 
-    public Item(String uuid, String ssd, String name, String model, String marque) {
-        this.uuid = uuid;
-        this.ssd = ssd;
-        this.name = name;
-        this.model = model;
-        this.marque = marque;
-    }
-
-    public Item() {
+    private Item() {
 
     }
 

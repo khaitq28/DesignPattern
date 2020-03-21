@@ -5,11 +5,13 @@ import java.util.List;
 
 public class AbstractException {
 
-    private String message;
+    protected String message;
 
-    private List<String> context;
+    protected List<String> context;
 
-    private List<String> errors;
+    protected List<String> errors;
+
+    protected int httpCode;
 
     protected void addToContext(String context) {
         if (this.context == null)
@@ -23,11 +25,17 @@ public class AbstractException {
         this.errors.add(error);
     }
 
-    public static class Builder<T extends  AbstractException> {
+    protected void setHttpCode(int httpCode) {
+        this.httpCode = httpCode;
+    }
 
-        public Builder(Class<T> clazz) throws IllegalAccessException, InstantiationException {
-            this.exception = clazz.newInstance();
+    protected abstract static class Builder<T extends  AbstractException> {
+
+        public Builder() {
+            this.exception = createObjectThis();
         }
+
+        protected abstract T createObjectThis();
 
         private T exception;
 
@@ -35,17 +43,22 @@ public class AbstractException {
             return exception;
         }
 
-        public Builder addMessage(String message) {
+        public Builder<T> addMessage(String message) {
             this.exception.setMessage(message);
             return this;
         }
 
-        public Builder addToContext(String content) {
+        public Builder<T> addToContext(String content) {
             this.exception.addToContext(content);
             return this;
         }
 
-        public Builder addToError(String error) {
+        public Builder<T> setHttpCode(int httpCode) {
+            this.exception.setHttpCode(httpCode);
+            return this;
+        }
+
+        public Builder<T> addToError(String error) {
             this.exception.addError(error);
             return this;
         }
@@ -54,14 +67,6 @@ public class AbstractException {
 
     public void setMessage(String message) {
         this.message = message;
-    }
-
-    public void setContext(List<String> context) {
-        this.context = context;
-    }
-
-    public void setErrors(List<String> errors) {
-        this.errors = errors;
     }
 
     public String getMessage() {
