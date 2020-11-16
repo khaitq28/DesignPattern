@@ -28,12 +28,7 @@ public class AccountInfoValidator extends AccountValidator {
     }
 
     private boolean isEmptyField(String field) {
-
-        if (StringUtils.isEmpty(field)) {
-            return true;
-        }
-
-        return false;
+        return StringUtils.isEmpty(field) ? true : false;
     }
 
 }

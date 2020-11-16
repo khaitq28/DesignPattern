@@ -20,4 +20,19 @@ public class AccountBalanceValidator extends  AccountValidator {
         return validateByNextAccountValidator(account);
 
     }
+
+
+    public static void main(String ...args) throws InvalidAccountException {
+
+        AccountInfoValidator infoValidator = new AccountInfoValidator();
+        AccountBalanceValidator balanceValidator = new AccountBalanceValidator();
+        infoValidator.setNextSecurity(balanceValidator);
+
+        Account account = new Account("vbc", "bvc", -20d);
+
+        infoValidator.validateAcount(account);
+
+
+    }
+
 }
