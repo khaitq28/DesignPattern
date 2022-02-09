@@ -23,9 +23,9 @@ public abstract class AbstractException {
 
     protected abstract static class Builder<T extends AbstractException, B extends  Builder<T,B>> {
 
-        private T exception;
+        private final T exception;
 
-        private B builder;
+        private final B builder;
 
         public Builder() {
             this.exception = createObjectThis();
