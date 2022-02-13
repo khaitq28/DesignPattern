@@ -2,6 +2,7 @@ package effective.composition_vs_inheritance;
 
 import java.util.Collection;
 import java.util.Set;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @author Quang-Khai TRAN
@@ -10,7 +11,7 @@ import java.util.Set;
 
 public class  InstrumentedSet<E> extends CounterSet<E> {
 
-    private volatile int count;
+    private final AtomicInteger count = new AtomicInteger(0);
 
     public InstrumentedSet(Set<E> set) {
         super(set);
@@ -18,17 +19,17 @@ public class  InstrumentedSet<E> extends CounterSet<E> {
 
     @Override
     public boolean add(E e) {
-        count ++;
+        count.addAndGet(1);
         return super.add(e);
     }
 
     @Override
     public boolean addAll(Collection<? extends E> collection) {
-        count += collection.size();
+        count.addAndGet(collection.size());
         return super.addAll(collection);
     }
 
-    public int getCount() {
+    public AtomicInteger getCount() {
         return count;
     }
 }
