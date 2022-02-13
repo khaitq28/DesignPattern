@@ -1,7 +1,7 @@
-package builder;
+package pattern.builder;
 
-import models.car.Car;
-import models.car.CarType;
+import pattern.models.car.Car;
+import pattern.models.car.CarType;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;

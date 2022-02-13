@@ -1,8 +1,8 @@
-package factory;
+package pattern.factory;
 
-import models.car.BigTruck;
-import models.car.MediumTruck;
-import models.car.TruckType;
+import pattern.models.car.BigTruck;
+import pattern.models.car.MediumTruck;
+import pattern.models.car.TruckType;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
