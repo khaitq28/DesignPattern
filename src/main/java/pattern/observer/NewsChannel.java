@@ -16,8 +16,7 @@ public class NewsChannel  implements Channel{
 
 	public void setNews(String news) {
 		this.news = news;
-		
-		System.out.println(this.news + " - " + this.toString());
+		System.out.println(this + " get news: "+  this.news + " - ");
 	}
 
 }

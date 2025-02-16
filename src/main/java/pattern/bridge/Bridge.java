@@ -7,10 +7,9 @@ import pattern.models.car.engine.MediumEngine;
 import pattern.models.car.engine.SmallEngine;
 
 public class Bridge {
-	
-	
-	public static void bridgePattern(){
-		
+
+
+	public static void main(String[] args) {
 		System.out.println("Example of pattern.bridge patter");
 		System.out.println("Bridge patter");
 		

@@ -1,6 +1,6 @@
 package pattern.adapter2;
 
-public class InterService {
+public class NewService {
 
     public void run() {
 

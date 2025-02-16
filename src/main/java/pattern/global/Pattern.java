@@ -51,9 +51,7 @@ public class Pattern {
         factoryPattern();
         bridgePattern();
         chainOfRes();
-
         proxyPattern();
-        
         chainOfResponsibility();
     }
 

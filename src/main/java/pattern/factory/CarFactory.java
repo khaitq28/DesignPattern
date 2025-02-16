@@ -23,17 +23,11 @@ public class CarFactory {
 			car = new SmallCar();
 			break;
 		default:
-			break;
+			throw new IllegalArgumentException("Car type not supported");
 		}
 		return car;
 	}
 
-	/**
-	 *
-	 * @param carType
-	 * @param engine
-	 * @return Car
-	 */
 	public static Car createCar(CarType carType, IEngine engine){
 		Car car = createCar(carType);
 		car.setEngine(engine);

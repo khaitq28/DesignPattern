@@ -1,18 +1,16 @@
 package pattern.adapter2;
 
-public class AdapterService extends  SystemService {
+public class AdapterService extends OldService {
 
-    private InterService interService;
+    private NewService newService;
 
     @Override
     public void run() {
-//        super.run();
-
-        interService.run();
+        newService.run();
     }
 
-    public AdapterService(InterService interService) {
-        this.interService =  interService;
+    public AdapterService(NewService newService) {
+        this.newService = newService;
     }
 
 }

@@ -1,6 +1,6 @@
 package pattern.adapter2;
 
-public class SystemService {
+public class OldService {
 
 
     public void run() {
