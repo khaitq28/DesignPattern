@@ -3,7 +3,7 @@ package pattern.builder.message;
 
 public class MessageCreator {
 
-    private MessageBuilder messageBuilder;
+    private final MessageBuilder messageBuilder;
 
     public MessageCreator(MessageBuilder messageBuilder) {
         this.messageBuilder = messageBuilder;

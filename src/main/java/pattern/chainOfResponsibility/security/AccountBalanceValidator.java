@@ -9,7 +9,7 @@ package pattern.chainOfResponsibility.security;
 public class AccountBalanceValidator extends  AccountValidator {
 
 
-    public boolean validateAcount(Account account) throws InvalidAccountException {
+    public boolean validateAccount(Account account) throws InvalidAccountException {
 
         if (account.getBalance() < 0 || account.getBalance() == Double.MAX_VALUE) {
             throw  new InvalidAccountException("Balance is not valid : smaller than 0 or bigger than Max ");
@@ -30,7 +30,7 @@ public class AccountBalanceValidator extends  AccountValidator {
 
         Account account = new Account("vbc", "bvc", -20d);
 
-        infoValidator.validateAcount(account);
+        infoValidator.validateAccount(account);
 
 
     }

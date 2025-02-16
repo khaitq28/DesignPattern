@@ -58,23 +58,14 @@ public class Pattern {
     private static void chainOfRes() {
 
         Account account = new Account("Abc", "xxx", -3000d);
-
         AccountInfoValidator accountInfoValidator = new AccountInfoValidator();
-
         AccountBalanceValidator accountBalanceValidator = new AccountBalanceValidator();
-
         accountInfoValidator.setNextSecurity(accountBalanceValidator);
-
         try {
-
-            accountInfoValidator.validateAcount(account);
-
+            accountInfoValidator.validateAccount(account);
         } catch (InvalidAccountException ex1) {
-
             System.out.println(ex1.getMessage());
         }
-
-
     }
 
     private static void chainOfResponsibility() {
