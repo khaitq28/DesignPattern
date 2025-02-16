@@ -8,6 +8,6 @@ package pattern.builder.message;
 
 public interface MessageBuilder {
 
-    Message buildMessage() throws Exception;
+    Message buildMessage();
 
 }

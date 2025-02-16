@@ -1,10 +1,5 @@
 package pattern.builder.message;
 
-/**
- * Created by khaitq
- * Date: 13/05/2018
- * Github:  https://github.com/quangkhai88
- */
 
 public class MessageFactory {
 
@@ -12,9 +7,9 @@ public class MessageFactory {
 
     }
 
-    static Message createMessage(MessageType messageType) throws Exception {
+    static Message createMessage(MessageType messageType) {
 
-        Message message = null;
+        Message message;
 
         switch (messageType) {
             case JMS:
@@ -26,7 +21,7 @@ public class MessageFactory {
                 break;
 
                 default:
-                    throw new Exception("Unknown Message type");
+                    throw new IllegalArgumentException("Unknown Message type");
         }
 
         return message;
