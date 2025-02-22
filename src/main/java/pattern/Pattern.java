@@ -1,4 +1,4 @@
-package pattern.global;
+package pattern;
 
 import pattern.adapter.CarController;
 import pattern.adapter.CarListAdapter;
